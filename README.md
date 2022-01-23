@@ -1,24 +1,27 @@
-# README
+# Projeto 2 do Curso Ruby on Rails 5.x - Do início ao fim!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requisitos
+● Cadastro de usuários e admins
 
-Things you may want to cover:
+● Cadastro de questões e concursos
 
-* Ruby version
+## Dependências
 
-* System dependencies
+- Ruby 3.0.3
+- Rails 6.1.4.4
+- Sqlite3
 
-* Configuration
+## API no Heroku
+● link:
 
-* Database creation
+## Documentação da API
+● link: 
 
-* Database initialization
+## Setup
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. `git clone https://github.com/leoalmeidasa/TimeToAnswer.git`
+2. `cd TimeToAnswer`
+3. `rails db:create db:migrate`
+4. `yarn install`
+5. `rails s`
+6. Abrir o link `localhost:3000`
