@@ -9,11 +9,11 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in the app/assets
+# application.js, application.scss, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( admins_backoffice.js admins_backoffice.css users_backoffice.js users_backoffice.css )
+Rails.application.config.assets.precompile += %w( admins_backoffice.js admins_backoffice.css )
 #lib
-Rails.application.config.assets.precompile += %w( sb-admin-2.js sb-admin-2.min.css custom.js custom.css img.jpg)
+Rails.application.config.assets.precompile += %w( sb-admin-2.js sb-admin-2.min.css gentelella-custom.js gentelella-custom.css img.jpg)
 # vendor/assets
-Rails.application.config.assets.precompile += %w( jquery-2.2.3/dist/jquery.js )
+#Rails.application.config.assets.precompile += %w( jquery-2.2.3/dist/jquery.js )
 

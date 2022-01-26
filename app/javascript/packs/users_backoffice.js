@@ -1,5 +1,5 @@
 /*
-*= require jquery-2.2.3/dist/jquery.js
+*= require jquery-2.2.3/dist/jquery.min.js
 *= require /bootstrap/dist/js/bootstrap.bundle.min.js
 *= require /fastclick/lib/fastclick.js
 *= require /nprogress/nprogress.js
