@@ -21,7 +21,8 @@
 
 1. `git clone https://github.com/leoalmeidasa/TimeToAnswer.git`
 2. `cd TimeToAnswer`
-3. `rails db:create db:migrate`
-4. `yarn install`
-5. `rails s`
-6. Abrir o link `localhost:3000`
+3.  Adicionar Usuário e Admin Padrão `rails dev:setup` 
+4. `rails db:create db:migrate`
+5. `yarn install`
+6. `rails s`
+7. Abrir o link `localhost:3000`
