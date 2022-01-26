@@ -7,6 +7,10 @@ import Rails from "@rails/ujs"
 //import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "jquery"
+import 'popper.js'
+import "bootstrap/dist/js/bootstrap.bundle"
+import "jquery.easing/jquery.easing"
 
 Rails.start()
 //Turbolinks.start()
