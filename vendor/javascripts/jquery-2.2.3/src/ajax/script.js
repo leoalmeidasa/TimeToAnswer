@@ -7,7 +7,7 @@ define( [
 // Install script dataType
 jQuery.ajaxSetup( {
 	accepts: {
-		script: "text/javascript, application/javascript, " +
+		script: "text/javascripts, application/javascripts, " +
 			"application/ecmascript, application/x-ecmascript"
 	},
 	contents: {
