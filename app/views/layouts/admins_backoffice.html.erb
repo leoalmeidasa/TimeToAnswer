@@ -88,10 +88,9 @@
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                  aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
-                Logout
-              </a>
+              <%= link_to destroy_admin_session_path, method: :delete, class: 'dropdown-item'  do %>
+                <i class="fa fa-sign-out " aria-hidden="true"></i>Sair
+              <% end %>
             </div>
           </li>
         </ul>
@@ -106,17 +105,6 @@
       <!-- /.container-fluid -->
     </div>
     <!-- End of Main Content -->
-
-    <!-- Footer -->
-    <footer class="sticky-footer bg-white">
-      <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-          <span>Copyright &copy; Your Website 2020</span>
-        </div>
-      </div>
-    </footer>
-    <!-- End of Footer -->
-
   </div>
   <!-- End of Content Wrapper -->
 
@@ -139,17 +127,24 @@
           <span aria-hidden="true">×</span>
         </button>
       </div>
-      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-      <div class="modal-footer">
-        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-        <%= link_to 'Logout', destroy_admin_session_path, method: :delete, class: 'btn btn-warning'  %>
-      </div>
     </div>
   </div>
 </div>
 
-<%= javascript_pack_tag 'application' %>
-<%= javascript_pack_tag 'admins_backoffice' %>
+<%= javascript_include_tag 'application' %>
+<%= javascript_include_tag 'admins_backoffice' %>
+
+
+  <% if notice %>
+    <%= javascript_tag do %>
+      $.bootstrapGrowl('<%= notice %>', {
+      type: 'success',
+      align: 'rigth',
+      alow_dismiss: 'true',
+      stackup_space: 10
+      });
+    <% end %>
+  <% end %>
 
 
 </body>
