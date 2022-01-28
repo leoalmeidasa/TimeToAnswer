@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   namespace :admins_backoffice do
     get 'welcome/index' #dashboard
     resources :admins
+    resources :subjects
   end
 
   root to: 'site/welcome#index'
