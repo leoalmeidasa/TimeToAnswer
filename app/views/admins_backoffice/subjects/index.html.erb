@@ -2,7 +2,7 @@
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h3 class="m-0 font-weight-bold ">Assuntos</h3>
+      <h3 class="m-0 font-weight-bold "><%= t('messages.listing', model: @subjects.model_name.human(count: 2)) %></h3>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -10,7 +10,7 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Assunto</th>
+              <th><%= translate_attribute(@subjects, :description)%></th>
               <th>
                 <%= link_to new_admins_backoffice_subject_path, class:"btn btn-success btn-circle btn-sm" do %>
                   <i class="fa fa-plus"></i>
@@ -27,7 +27,7 @@
                 <%= link_to edit_admins_backoffice_subject_path(subject), class:"btn btn-warning btn-circle btn-sm" do %>
                   <i class="fa fa-edit"></i>
                 <% end %>
-                <%= link_to admins_backoffice_subject_path(subject),method: :delete, class:"btn btn-danger btn-circle btn-sm", data: {confirm: "Deseja excluir esse assunto ?"} do %>
+                <%= link_to admins_backoffice_subject_path(subject),method: :delete, class:"btn btn-danger btn-circle btn-sm", data: {confirm: t('messages.confirm_with', item: subject.description.truncate(15) ) } do %>
                   <i class="fa fa-remove"></i>
                 <%end %>
               </td>
