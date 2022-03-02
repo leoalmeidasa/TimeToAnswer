@@ -1,14 +1,9 @@
-<h1>Site::Welcome#index</h1>
-<p>Find me in app/views/site/welcome/index.html.erb</p>
-
-<% if user_signed_in? %>
-    <p><%=current_user.email %> está logado</p>
-  <% else %>
-    <p>Usuário não está logado</p>
-<% end %>
-
-<% if admin_signed_in? %>
-  <p><%=current_admin.email %> está logado</p>
-<% else %>
-  <p>Admin não está logado</p>
-<% end %>
+<div class="jumbotron">
+  <h1 class="display-4">Seja Bem Vindo</h1>
+  <p class="lead">Escolha uma opçao abaixo</p>
+  <hr class="my-4">
+  <p class="lead">
+    <%= link_to 'Admin', admins_backoffice_welcome_index_path, class: "btn btn-info" %>
+    <%= link_to 'Usuário', users_backoffice_welcome_index_path, class: "btn btn-success" %>
+  </p>
+</div>

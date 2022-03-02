@@ -94,10 +94,9 @@
           <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+              <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%= current_admin.email %></span>
                 <%= image_tag "undraw_profile.svg", class:"img-profile rounded-circle" %>
             </a>
-            <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                  aria-labelledby="userDropdown">
               <%= link_to destroy_admin_session_path, method: :delete, class: 'dropdown-item'  do %>
@@ -107,21 +106,13 @@
           </li>
         </ul>
       </nav>
-      <!-- End of Topbar -->
-
-      <!-- Begin Page Content -->
       <div class="container-fluid">
-        <!-- Page Heading -->
         <%= yield %>
       </div>
-      <!-- /.container-fluid -->
     </div>
-    <!-- End of Main Content -->
   </div>
-  <!-- End of Content Wrapper -->
-
 </div>
-<!-- End of Page Wrapper -->
+
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">

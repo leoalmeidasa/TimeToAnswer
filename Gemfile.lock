@@ -81,6 +81,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     childprocess (4.1.0)
+    cocoon (1.2.15)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -254,6 +255,7 @@ DEPENDENCIES
   bullet (~> 6.1)
   byebug
   capybara (>= 3.26)
+  cocoon
   coffee-rails (~> 4.2)
   devise (~> 4.8, >= 4.8.1)
   faker (~> 2.19)
