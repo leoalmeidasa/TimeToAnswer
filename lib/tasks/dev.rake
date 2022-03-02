@@ -92,9 +92,7 @@ namespace :dev do
 
   def add_answer(answers_array = [])
     rand(2..5).times do |j|
-      answers_array.push(
-        create_answer_params
-      )
+      answers_array[j] = (create_answer_params)
     end
   end
 
