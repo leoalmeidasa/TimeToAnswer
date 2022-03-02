@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require 'faker'
+I18n.reload!
 
 namespace :dev do
   DEFAULT_PASSWORD = 123_456
@@ -78,9 +80,9 @@ namespace :dev do
 
   def create_question_params(subject = Subject.all.sample)
     { question: {
-      description: "#{Faker::Lorem.paragraph} #{Faker::Lorem.question}",
-      subject: subject,
-      answers_attributes: {}
+        description: Faker::Lorem.paragraph,
+        subject: subject,
+        answers_attributes: {}
     }}
   end
 
@@ -88,7 +90,7 @@ namespace :dev do
     { description: Faker::Lorem.sentence, correct: correct }
   end
 
-  def add_answers(answers_array = [])
+  def add_answer(answers_array = [])
     rand(2..5).times do |j|
       answers_array.push(
         create_answer_params

@@ -28,6 +28,7 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  faker:
+    name:
+      title: 'Title'
